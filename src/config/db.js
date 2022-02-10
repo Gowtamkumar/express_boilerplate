@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
 const dotenv = require('dotenv')
-var colors = require('colors');
 
 // load env vars
 dotenv.config({ path: './src/config/config.env' });
@@ -14,7 +13,6 @@ const sequelize = new Sequelize(
         port: process.env.DB_PORT,
         dialect: 'postgres',
         logging: false,
-
         define: {
             underscored: true,
             createdAt: 'created_at',
@@ -27,7 +25,6 @@ const connectPostgreSQL = () => {
         .then(() => console.log(`PostgreSQl Database connected successfull`.yellow.bold))
         .catch((err) => console.log(`Error ${err}`))
 }
-
 
 module.exports = {
     sequelize,
