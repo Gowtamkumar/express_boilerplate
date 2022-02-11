@@ -4,9 +4,14 @@
 CREATE TABLE users(
     
     id                      SERIAL NOT NULL,
-    username                    VARCHAR(255),  
-    password                VARCHAR(255),  
-    is_active                  VARCHAR(255),
+    name                    VARCHAR(255),  
+    email                   VARCHAR(255),
+    phone                   VARCHAR(255),
+    password                   VARCHAR(255),
+    resetPasswordToken                   VARCHAR(255),
+    resetPasswordExpire                    VARCHAR(255),
+    role:                    VARCHAR(255),
+    status                  VARCHAR(255),
 
     created_at              TIMESTAMP WITH TIME ZONE,
     updated_at              TIMESTAMP WITH TIME ZONE,
@@ -31,6 +36,32 @@ CREATE TABLE bootcamps(
   CONSTRAINT bootcamps_pkey PRIMARY KEY (id)
 )
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ....................start..................... -->
 
 ## departments
